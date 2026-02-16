@@ -1,0 +1,779 @@
+/* ================================================
+   Solis Group — Brand Overrides
+   Layered on top of the ACnalys template CSS.
+   Keeps body dark teal (#001d21), swaps red accent 
+   to gold/amber to match the Solis sun-ray logo.
+   ================================================ */
+
+/* ------------------------------------------------
+   CSS Custom Properties
+   ------------------------------------------------ */
+:root {
+  --solis-body: #001d21;
+  --solis-primary: #0e59f2;
+  --solis-accent: #d4a017;
+  --solis-accent-light: #e8bf4a;
+  --solis-red: #d90a2c;       /* kept for legacy elements */
+  --solis-dark: #010d12;
+  --solis-white: #ffffff;
+  --solis-gray: #94a3b8;
+  --solis-border: rgba(255,255,255,0.08);
+}
+
+/* ------------------------------------------------
+   Logo sizing — the source PNG is oversized
+   ------------------------------------------------ */
+.navbar-brand img {
+  max-height: 52px;
+  width: auto;
+}
+@media (max-width: 1600px) {
+  .navbar-brand img {
+    max-height: 44px;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar-brand img {
+    max-height: 38px;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-brand img {
+    max-height: 36px;
+  }
+}
+
+.footer .logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+/* ------------------------------------------------
+   Subtitle dot — swap red to gold
+   ------------------------------------------------ */
+.subtitle {
+  color: var(--solis-accent);
+}
+.subtitle::after {
+  background-color: var(--solis-accent);
+}
+
+/* ------------------------------------------------
+   Primary button — keep blue, add subtle transition
+   ------------------------------------------------ */
+.primary-link-btn {
+  background-color: var(--solis-primary);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.primary-link-btn:hover {
+  background-color: transparent;
+  border-color: var(--solis-primary);
+  color: var(--solis-white);
+}
+
+/* ------------------------------------------------
+   Selection text — swap to blue
+   ------------------------------------------------ */
+::selection {
+  background: var(--solis-primary);
+  color: var(--solis-white);
+}
+::-moz-selection {
+  background: var(--solis-primary);
+  color: var(--solis-white);
+}
+
+/* ------------------------------------------------
+   Banner — gold accent subtitle line
+   ------------------------------------------------ */
+.banner {
+  background-color: var(--solis-body);
+}
+.banner .overlay .banner-section .subject {
+  color: var(--solis-accent);
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+.banner .overlay .banner-section .heading {
+  max-width: 800px;
+}
+.banner .overlay .banner-section .vision-mission {
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+.banner .overlay .banner-section .vision-mission p {
+  color: rgba(255,255,255,0.8);
+  font-family: "Jost", sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+.banner .overlay .banner-section .vision-mission p strong {
+  color: var(--solis-accent);
+}
+
+/* ------------------------------------------------
+   What We Do — icon list on homepage
+   ------------------------------------------------ */
+.what-we-do {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .what-we-do {
+    padding: 70px 0;
+  }
+}
+.what-we-do .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .what-we-do-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.what-we-do-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid var(--solis-border);
+  border-radius: 8px;
+  transition: all 0.35s ease;
+  background: rgba(255,255,255,0.02);
+}
+.what-we-do-item:hover {
+  border-color: var(--solis-accent);
+  background: rgba(212,160,23, 0.05);
+  transform: translateY(-4px);
+}
+.what-we-do-item .icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(14,89,242,0.1);
+  color: var(--solis-primary);
+  font-size: 22px;
+}
+.what-we-do-item:hover .icon {
+  background: var(--solis-accent);
+  color: var(--solis-dark);
+}
+.what-we-do-item h3 {
+  color: var(--solis-white);
+  font-family: "Marcellus", serif;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+@media (max-width: 576px) {
+  .what-we-do-item h3 {
+    font-size: 17px;
+  }
+}
+.what-we-do-item p {
+  color: var(--solis-gray);
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* ------------------------------------------------
+   Platform Highlights — 4 vertical cards
+   ------------------------------------------------ */
+.platform-highlights {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .platform-highlights {
+    padding: 70px 0;
+  }
+}
+.platform-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--solis-border);
+  border-radius: 12px;
+  padding: 40px 30px;
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.platform-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--solis-primary);
+  box-shadow: 0 20px 60px rgba(14,89,242, 0.08);
+}
+.platform-card .card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: var(--solis-white);
+}
+.platform-card .card-icon.engineering { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+.platform-card .card-icon.greymatter  { background: linear-gradient(135deg, #475569, #334155); }
+.platform-card .card-icon.forum       { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+.platform-card .card-icon.culture     { background: linear-gradient(135deg, #d97706, #b45309); }
+
+.platform-card .card-label {
+  color: var(--solis-accent);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+.platform-card h3 {
+  color: var(--solis-white);
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 6px;
+}
+@media (max-width: 576px) {
+  .platform-card h3 {
+    font-size: 20px;
+  }
+}
+.platform-card .card-tagline {
+  color: var(--solis-primary);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.platform-card p {
+  color: var(--solis-gray);
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+.platform-card .card-link {
+  color: var(--solis-primary);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+.platform-card .card-link:hover {
+  color: var(--solis-accent);
+  gap: 12px;
+}
+.platform-card .card-link svg {
+  transition: transform 0.3s ease;
+}
+.platform-card .card-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* ------------------------------------------------
+   Vision / Mission parallax banner
+   ------------------------------------------------ */
+.vision-banner {
+  background-image: url("../images/home/build-website-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%);
+  position: relative;
+  padding: 160px 0;
+  text-align: center;
+  overflow: hidden;
+}
+@media (max-width: 576px) {
+  .vision-banner {
+    padding: 80px 0;
+    clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+  }
+}
+.vision-banner .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 29, 33, 0.82);
+}
+.vision-banner .content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.vision-banner h2 {
+  color: var(--solis-white);
+  font-family: "Marcellus", serif;
+  font-size: 46px;
+  line-height: 58px;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .vision-banner h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .vision-banner h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+.vision-banner .vision-text,
+.vision-banner .mission-text {
+  color: rgba(255,255,255,0.85);
+  font-family: "Jost", sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+.vision-banner .label-tag {
+  display: inline-block;
+  color: var(--solis-accent);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+/* ------------------------------------------------
+   CTA Section before footer
+   ------------------------------------------------ */
+.cta-section {
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 0;
+  }
+}
+.cta-section h2 {
+  color: var(--solis-white);
+  font-family: "Marcellus", serif;
+  font-size: 42px;
+  line-height: 52px;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .cta-section h2 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+.cta-section p {
+  color: var(--solis-gray);
+  font-family: "Jost", sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+.cta-section .button {
+  border: 2px solid var(--solis-primary);
+}
+
+/* ------------------------------------------------
+   Footer overrides — adjust for Solis 4-col layout
+   ------------------------------------------------ */
+.footer .footer-link li a svg {
+  margin-right: 8px;
+}
+.footer .footer-link li a:hover {
+  color: var(--solis-accent);
+}
+.footer .social-link a:hover {
+  background-color: var(--solis-accent);
+}
+.footer .social-link a:hover i {
+  color: var(--solis-dark);
+}
+.footer .footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.footer .footer-contact-item i {
+  color: var(--solis-accent);
+  font-size: 16px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+.footer .footer-contact-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 22px;
+}
+.footer .footer-contact-item a {
+  color: var(--solis-white);
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+}
+.footer .footer-contact-item a:hover {
+  color: var(--solis-accent);
+}
+
+/* ------------------------------------------------
+   Page hero for inner pages
+   ------------------------------------------------ */
+.page-hero {
+  padding: 160px 0 80px;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, rgba(14,89,242,0.06) 0%, transparent 100%);
+}
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 120px 0 50px;
+  }
+}
+.page-hero h1 {
+  color: var(--solis-white);
+  font-family: "Marcellus", serif;
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+.page-hero .breadcrumb {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.page-hero .breadcrumb a {
+  color: var(--solis-gray);
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+}
+.page-hero .breadcrumb a:hover {
+  color: var(--solis-accent);
+}
+.page-hero .breadcrumb span {
+  color: var(--solis-accent);
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* ------------------------------------------------
+   Inner page content sections
+   ------------------------------------------------ */
+.content-section {
+  padding: 100px 0;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .content-section {
+    padding: 60px 0;
+  }
+}
+.content-section h2 {
+  color: var(--solis-white);
+  font-family: "Marcellus", serif;
+  font-size: 36px;
+  line-height: 46px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .content-section h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.content-section p {
+  color: rgba(255,255,255,0.75);
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+.content-section ul.focus-list {
+  list-style: none;
+  padding: 0;
+}
+.content-section ul.focus-list li {
+  color: rgba(255,255,255,0.8);
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.content-section ul.focus-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--solis-accent);
+}
+
+/* ------------------------------------------------
+   Leadership profile card
+   ------------------------------------------------ */
+.leader-profile {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+@media (max-width: 992px) {
+  .leader-profile {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.leader-profile .leader-photo {
+  flex-shrink: 0;
+  width: 280px;
+  height: 340px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leader-profile .leader-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.leader-profile .leader-photo .placeholder-avatar {
+  font-size: 80px;
+  color: var(--solis-accent);
+}
+.leader-profile .leader-info h2 {
+  margin-bottom: 4px;
+}
+.leader-profile .leader-info .leader-title {
+  color: var(--solis-accent);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+.leader-profile .leader-info p {
+  color: rgba(255,255,255,0.75);
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+
+/* ------------------------------------------------
+   Company detail page
+   ------------------------------------------------ */
+.company-detail {
+  padding: 100px 0;
+}
+@media (max-width: 768px) {
+  .company-detail {
+    padding: 60px 0;
+  }
+}
+.company-detail .tagline {
+  color: var(--solis-accent);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.company-detail h2 {
+  color: var(--solis-white);
+  font-family: "Marcellus", serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.company-detail p {
+  color: rgba(255,255,255,0.75);
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+.company-detail .deliverables h3 {
+  color: var(--solis-white);
+  font-family: "Marcellus", serif;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+/* ------------------------------------------------
+   Partner audience cards
+   ------------------------------------------------ */
+.partner-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--solis-border);
+  border-radius: 10px;
+  padding: 36px 28px;
+  transition: all 0.35s ease;
+  height: 100%;
+}
+.partner-card:hover {
+  border-color: var(--solis-accent);
+  transform: translateY(-4px);
+}
+.partner-card h3 {
+  color: var(--solis-white);
+  font-family: "Marcellus", serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.partner-card p {
+  color: var(--solis-gray);
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* ------------------------------------------------
+   Insights types / category tags
+   ------------------------------------------------ */
+.insight-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.insight-tag {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid var(--solis-border);
+  border-radius: 20px;
+  color: var(--solis-white);
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.insight-tag:hover {
+  border-color: var(--solis-accent);
+  color: var(--solis-accent);
+}
+
+/* ------------------------------------------------
+   Newsletter signup form
+   ------------------------------------------------ */
+.newsletter-form {
+  max-width: 520px;
+  display: flex;
+  gap: 12px;
+}
+@media (max-width: 576px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 1px solid var(--solis-border);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  color: var(--solis-white);
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+}
+.newsletter-form input::placeholder {
+  color: var(--solis-gray);
+}
+.newsletter-form button {
+  padding: 14px 28px;
+  background: var(--solis-primary);
+  color: var(--solis-white);
+  border-radius: 6px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.newsletter-form button:hover {
+  background: var(--solis-accent);
+  color: var(--solis-dark);
+}
+
+/* ------------------------------------------------
+   Contact page form
+   ------------------------------------------------ */
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+.contact-form label {
+  color: var(--solis-white);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--solis-border);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.04);
+  color: var(--solis-white);
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--solis-primary);
+}
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ------------------------------------------------
+   Utility helpers
+   ------------------------------------------------ */
+.text-accent { color: var(--solis-accent) !important; }
+.text-primary-blue { color: var(--solis-primary) !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mt-40 { margin-top: 40px; }
+.mt-60 { margin-top: 60px; }
