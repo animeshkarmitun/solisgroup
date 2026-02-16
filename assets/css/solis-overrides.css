@@ -22,28 +22,42 @@
 }
 
 /* ------------------------------------------------
-   Logo sizing — the source PNG is oversized
+   Logo sizing — override template max-width %
+   The template uses max-width: 80%/60% which
+   crushes the compact Solis logo. We match the
+   template's specificity to override properly.
    ------------------------------------------------ */
+.navbar .container-fluid .navbar-brand img,
 .navbar-brand img {
   max-height: 52px;
+  max-width: none !important;
   width: auto;
 }
 
 @media (max-width: 1600px) {
+
+  .navbar .container-fluid .navbar-brand img,
   .navbar-brand img {
-    max-height: 44px;
+    max-height: 46px;
+    max-width: none !important;
   }
 }
 
 @media (max-width: 1200px) {
+
+  .navbar .container-fluid .navbar-brand img,
   .navbar-brand img {
-    max-height: 38px;
+    max-height: 42px;
+    max-width: none !important;
   }
 }
 
 @media (max-width: 992px) {
+
+  .navbar .container-fluid .navbar-brand img,
   .navbar-brand img {
-    max-height: 36px;
+    max-height: 38px;
+    max-width: none !important;
   }
 }
 
@@ -521,7 +535,7 @@
    Page hero for inner pages
    ------------------------------------------------ */
 .page-hero {
-  padding: 160px 0 80px;
+  padding: 140px 0 50px;
   text-align: center;
   position: relative;
   background: linear-gradient(180deg, rgba(14, 89, 242, 0.06) 0%, transparent 100%);
@@ -529,7 +543,7 @@
 
 @media (max-width: 768px) {
   .page-hero {
-    padding: 120px 0 50px;
+    padding: 110px 0 36px;
   }
 }
 
