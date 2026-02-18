@@ -42,6 +42,7 @@
 
     /* ---- Navbar (template overrides) ---- */
     --solis-nav-bg: #001d21;
+    --solis-nav-glass: rgba(0, 29, 33, 0.82);
     --solis-nav-text: #ffffff;
     --solis-nav-hover: #0e59f2;
     --solis-nav-dropdown-bg: #001d21;
