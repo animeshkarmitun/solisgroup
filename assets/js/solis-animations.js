@@ -192,6 +192,235 @@
 
 
     /* -----------------------------------------------
+       6. MAGNETIC BUTTON EFFECT (P3)
+       Buttons subtly follow the cursor when nearby
+       using GSAP for smooth elastic movement.
+       ----------------------------------------------- */
+    function initMagneticButtons() {
+        // Only on desktop with a mouse
+        if (window.matchMedia('(hover: none)').matches) return;
+        if (typeof gsap === 'undefined') return;
+
+        // Auto-apply magnetic class to CTA buttons
+        document.querySelectorAll('.primary-link-btn, .button').forEach(function (btn) {
+            btn.classList.add('magnetic-btn');
+        });
+
+        var magneticBtns = document.querySelectorAll('.magnetic-btn');
+        if (!magneticBtns.length) return;
+
+        magneticBtns.forEach(function (btn) {
+            var strength = 25; // pixels of maximum pull
+
+            btn.addEventListener('mousemove', function (e) {
+                var rect = btn.getBoundingClientRect();
+                var x = e.clientX - rect.left - rect.width / 2;
+                var y = e.clientY - rect.top - rect.height / 2;
+
+                // Update CSS custom properties for the glow gradient
+                var percentX = ((e.clientX - rect.left) / rect.width * 100);
+                var percentY = ((e.clientY - rect.top) / rect.height * 100);
+                btn.style.setProperty('--mouse-x', percentX + '%');
+                btn.style.setProperty('--mouse-y', percentY + '%');
+
+                gsap.to(btn, {
+                    x: x * 0.3,
+                    y: y * 0.2,
+                    duration: 0.4,
+                    ease: 'power2.out'
+                });
+            });
+
+            btn.addEventListener('mouseleave', function () {
+                gsap.to(btn, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.7,
+                    ease: 'elastic.out(1.2, 0.4)'
+                });
+            });
+        });
+    }
+
+
+    /* -----------------------------------------------
+       7. ENHANCED PRELOADER (P3)
+       Overrides the template's basic fadeOut with
+       a curtain-wipe reveal animation.
+       ----------------------------------------------- */
+    function initEnhancedPreloader() {
+        var loader = document.querySelector('.loader-wrapper');
+        if (!loader) return;
+
+        // Override the template's jQuery fadeOut
+        // by adding our .loaded class instead
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                loader.classList.add('loaded');
+
+                // After curtain animation completes, hide entirely
+                setTimeout(function () {
+                    loader.style.visibility = 'hidden';
+                    loader.style.pointerEvents = 'none';
+                }, 1200);
+            }, 300); // slight delay for smoothness
+        });
+    }
+
+
+    /* -----------------------------------------------
+       8. FILM GRAIN INJECTION (P3)
+       Adds a subtle animated noise overlay to the
+       hero banner for atmospheric depth.
+       ----------------------------------------------- */
+    function initFilmGrain() {
+        var banner = document.querySelector('.banner');
+        if (!banner) return;
+
+        // Ensure banner has relative positioning
+        if (getComputedStyle(banner).position === 'static') {
+            banner.style.position = 'relative';
+        }
+
+        var grain = document.createElement('div');
+        grain.classList.add('hero-grain');
+        grain.setAttribute('aria-hidden', 'true');
+        banner.appendChild(grain);
+    }
+
+
+    /* -----------------------------------------------
+       9. CUSTOM CURSOR DOT (P3)
+       A small dot that follows the mouse and expands
+       when hovering over interactive elements.
+       Desktop only.
+       ----------------------------------------------- */
+    function initCustomCursor() {
+        // Only on desktop with hover capability
+        if (window.matchMedia('(hover: none)').matches) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var dot = document.createElement('div');
+        dot.classList.add('cursor-dot');
+        document.body.appendChild(dot);
+
+        var mouseX = 0, mouseY = 0;
+        var dotX = 0, dotY = 0;
+        var isVisible = false;
+
+        document.addEventListener('mousemove', function (e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            if (!isVisible) {
+                dot.classList.add('visible');
+                isVisible = true;
+            }
+        });
+
+        document.addEventListener('mouseleave', function () {
+            dot.classList.remove('visible');
+            isVisible = false;
+        });
+
+        // Expand on interactive elements
+        var interactiveSelectors = 'a, button, .button, .primary-link-btn, .nav-link, .card-link, input, textarea, select';
+
+        document.addEventListener('mouseover', function (e) {
+            if (e.target.closest(interactiveSelectors)) {
+                dot.classList.add('expanded');
+            }
+        });
+
+        document.addEventListener('mouseout', function (e) {
+            if (e.target.closest(interactiveSelectors)) {
+                dot.classList.remove('expanded');
+            }
+        });
+
+        // Smooth follow animation
+        function animateCursor() {
+            // Lerp for smooth trailing
+            dotX += (mouseX - dotX) * 0.15;
+            dotY += (mouseY - dotY) * 0.15;
+
+            dot.style.left = dotX + 'px';
+            dot.style.top = dotY + 'px';
+
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+    }
+
+
+    /* -----------------------------------------------
+       10. MULTI-LAYER HERO PARALLAX (P2)
+       Text moves at a different rate than the
+       background, creating depth layering.
+       ----------------------------------------------- */
+    function initMultiLayerParallax() {
+        var banner = document.querySelector('.banner');
+        var bannerContent = document.querySelector('.banner .overlay .banner-section');
+        if (!banner || !bannerContent) return;
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                window.requestAnimationFrame(function () {
+                    var scrollY = window.pageYOffset;
+                    var bannerHeight = banner.offsetHeight;
+
+                    if (scrollY < bannerHeight * 1.2) {
+                        // Background moves slower (already handled by initHeroParallax)
+                        // Text content moves at a faster rate for depth separation
+                        bannerContent.style.transform = 'translateY(' + (scrollY * 0.12) + 'px)';
+
+                        // Slight opacity fade as user scrolls past
+                        var opacity = 1 - (scrollY / bannerHeight) * 0.6;
+                        bannerContent.style.opacity = Math.max(opacity, 0.2);
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    }
+
+
+    /* -----------------------------------------------
+       11. GSAP SMOOTH SCROLL FOR ANCHORS (P2)
+       Intercepts anchor clicks and scrolls smoothly
+       with GSAP easing instead of native CSS jump.
+       ----------------------------------------------- */
+    function initSmoothAnchorScroll() {
+        if (typeof gsap === 'undefined') return;
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#' || !targetId) return;
+
+                var targetEl = document.querySelector(targetId);
+                if (!targetEl) return;
+
+                e.preventDefault();
+
+                gsap.to(window, {
+                    scrollTo: {
+                        y: targetEl,
+                        offsetY: 80 // account for sticky header
+                    },
+                    duration: 1,
+                    ease: 'power3.inOut'
+                });
+            });
+        });
+    }
+
+
+    /* -----------------------------------------------
        INIT — run everything on DOM ready
        ----------------------------------------------- */
     function init() {
@@ -200,7 +429,17 @@
         initRippleEffect();
         initHeroParallax();
         setActiveNav();
+
+        // P2+P3 features
+        initMagneticButtons();
+        initFilmGrain();
+        initCustomCursor();
+        initMultiLayerParallax();
+        initSmoothAnchorScroll();
     }
+
+    // Enhanced preloader must bind before window.load
+    initEnhancedPreloader();
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
