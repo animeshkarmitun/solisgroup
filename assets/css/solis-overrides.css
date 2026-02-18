@@ -1,28 +1,18 @@
 /* ================================================
-   Solis Group — Brand Overrides
+   Solis Group - Brand Overrides
    Layered on top of the ACnalys template CSS.
-   Keeps body dark teal (#001d21), swaps red accent 
-   to gold/amber to match the Solis sun-ray logo.
+   
+   COLOR TOKENS are defined in:
+     assets/css/themes/black.css  (dark theme - default)
+     assets/css/themes/white.css  (light theme)
+   
+   This file handles layout, typography, spacing, and
+   component styles. It references --solis-* variables
+   from the active theme file.
    ================================================ */
 
 /* ------------------------------------------------
-   CSS Custom Properties
-   ------------------------------------------------ */
-:root {
-  --solis-body: #001d21;
-  --solis-primary: #0e59f2;
-  --solis-accent: #d4a017;
-  --solis-accent-light: #e8bf4a;
-  --solis-red: #d90a2c;
-  /* kept for legacy elements */
-  --solis-dark: #010d12;
-  --solis-white: #ffffff;
-  --solis-gray: #94a3b8;
-  --solis-border: rgba(255, 255, 255, 0.08);
-}
-
-/* ------------------------------------------------
-   Logo sizing — override template max-width %
+   Logo sizing - override template max-width %
    The template uses max-width: 80%/60% which
    crushes the compact Solis logo. We match the
    template's specificity to override properly.
@@ -67,7 +57,7 @@
 }
 
 /* ------------------------------------------------
-   Subtitle dot — swap red to gold
+   Subtitle dot - swap red to gold
    ------------------------------------------------ */
 .subtitle {
   color: var(--solis-accent);
@@ -78,7 +68,7 @@
 }
 
 /* ------------------------------------------------
-   Primary button — keep blue, add subtle transition
+   Primary button - keep blue, add subtle transition
    ------------------------------------------------ */
 .primary-link-btn {
   background-color: var(--solis-primary);
@@ -89,24 +79,24 @@
 .primary-link-btn:hover {
   background-color: transparent;
   border-color: var(--solis-primary);
-  color: var(--solis-white);
+  color: var(--solis-text);
 }
 
 /* ------------------------------------------------
-   Selection text — swap to blue
+   Selection text - swap to blue
    ------------------------------------------------ */
 ::selection {
   background: var(--solis-primary);
-  color: var(--solis-white);
+  color: var(--solis-text);
 }
 
 ::-moz-selection {
   background: var(--solis-primary);
-  color: var(--solis-white);
+  color: var(--solis-text);
 }
 
 /* ------------------------------------------------
-   Banner — gold accent subtitle line
+   Banner - gold accent subtitle line
    ------------------------------------------------ */
 .banner {
   background-color: var(--solis-body);
@@ -131,7 +121,7 @@
 }
 
 .banner .overlay .banner-section .vision-mission p {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--solis-text-tertiary);
   font-family: "Jost", sans-serif;
   font-size: 17px;
   line-height: 28px;
@@ -143,7 +133,7 @@
 }
 
 /* ------------------------------------------------
-   What We Do — icon list on homepage
+   What We Do - icon list on homepage
    ------------------------------------------------ */
 .what-we-do {
   padding: 120px 0;
@@ -183,12 +173,12 @@
   border: 1px solid var(--solis-border);
   border-radius: 8px;
   transition: all 0.35s ease;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--solis-card-bg);
 }
 
 .what-we-do-item:hover {
   border-color: var(--solis-accent);
-  background: rgba(212, 160, 23, 0.05);
+  background: var(--solis-wwd-hover-bg);
   transform: translateY(-4px);
 }
 
@@ -200,18 +190,18 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: rgba(14, 89, 242, 0.1);
+  background: var(--solis-icon-bg);
   color: var(--solis-primary);
   font-size: 22px;
 }
 
 .what-we-do-item:hover .icon {
   background: var(--solis-accent);
-  color: var(--solis-dark);
+  color: var(--solis-text-on-accent);
 }
 
 .what-we-do-item h3 {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Marcellus", serif;
   font-size: 20px;
   line-height: 28px;
@@ -225,14 +215,14 @@
 }
 
 .what-we-do-item p {
-  color: var(--solis-gray);
+  color: var(--solis-text-secondary);
   font-family: "Jost", sans-serif;
   font-size: 15px;
   line-height: 24px;
 }
 
 /* ------------------------------------------------
-   Platform Highlights — 4 vertical cards
+   Platform Highlights - 4 vertical cards
    ------------------------------------------------ */
 .platform-highlights {
   padding: 120px 0;
@@ -247,7 +237,7 @@
 }
 
 .platform-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--solis-card-bg);
   border: 1px solid var(--solis-border);
   border-radius: 12px;
   padding: 40px 30px;
@@ -260,7 +250,7 @@
 .platform-card:hover {
   transform: translateY(-8px);
   border-color: var(--solis-primary);
-  box-shadow: 0 20px 60px rgba(14, 89, 242, 0.08);
+  box-shadow: var(--solis-shadow-card);
 }
 
 .platform-card .card-icon {
@@ -272,23 +262,23 @@
   justify-content: center;
   font-size: 28px;
   margin-bottom: 24px;
-  color: var(--solis-white);
+  color: var(--solis-text);
 }
 
 .platform-card .card-icon.engineering {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: var(--solis-gradient-engineering);
 }
 
 .platform-card .card-icon.greymatter {
-  background: linear-gradient(135deg, #475569, #334155);
+  background: var(--solis-gradient-greymatter);
 }
 
 .platform-card .card-icon.forum {
-  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  background: var(--solis-gradient-forum);
 }
 
 .platform-card .card-icon.culture {
-  background: linear-gradient(135deg, #d97706, #b45309);
+  background: var(--solis-gradient-culture);
 }
 
 .platform-card .card-label {
@@ -302,7 +292,7 @@
 }
 
 .platform-card h3 {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Marcellus", serif;
   font-weight: 400;
   font-size: 24px;
@@ -326,7 +316,7 @@
 }
 
 .platform-card p {
-  color: var(--solis-gray);
+  color: var(--solis-text-secondary);
   font-family: "Jost", sans-serif;
   font-size: 15px;
   line-height: 24px;
@@ -386,7 +376,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 29, 33, 0.82);
+  background-color: var(--solis-overlay);
 }
 
 .vision-banner .content {
@@ -397,7 +387,7 @@
 }
 
 .vision-banner h2 {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Marcellus", serif;
   font-size: 46px;
   line-height: 58px;
@@ -420,7 +410,7 @@
 
 .vision-banner .vision-text,
 .vision-banner .mission-text {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--solis-text-tertiary);
   font-family: "Jost", sans-serif;
   font-size: 17px;
   line-height: 28px;
@@ -455,7 +445,7 @@
 }
 
 .cta-section h2 {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Marcellus", serif;
   font-size: 42px;
   line-height: 52px;
@@ -470,7 +460,7 @@
 }
 
 .cta-section p {
-  color: var(--solis-gray);
+  color: var(--solis-text-secondary);
   font-family: "Jost", sans-serif;
   font-size: 17px;
   line-height: 28px;
@@ -483,7 +473,7 @@
 }
 
 /* ------------------------------------------------
-   Footer overrides — adjust for Solis 4-col layout
+   Footer overrides - adjust for Solis 4-col layout
    ------------------------------------------------ */
 .footer .footer-link li a svg {
   margin-right: 8px;
@@ -498,7 +488,7 @@
 }
 
 .footer .social-link a:hover i {
-  color: var(--solis-dark);
+  color: var(--solis-text-on-accent);
 }
 
 .footer .footer-contact-item {
@@ -522,7 +512,7 @@
 }
 
 .footer .footer-contact-item a {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Jost", sans-serif;
   font-size: 15px;
 }
@@ -538,7 +528,7 @@
   padding: 140px 0 50px;
   text-align: center;
   position: relative;
-  background: linear-gradient(180deg, rgba(14, 89, 242, 0.06) 0%, transparent 100%);
+  background: var(--solis-hero-gradient);
 }
 
 @media (max-width: 768px) {
@@ -548,7 +538,7 @@
 }
 
 .page-hero h1 {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Marcellus", serif;
   font-size: 48px;
   line-height: 58px;
@@ -569,7 +559,7 @@
 }
 
 .page-hero .breadcrumb a {
-  color: var(--solis-gray);
+  color: var(--solis-text-secondary);
   font-family: "Work Sans", sans-serif;
   font-size: 15px;
 }
@@ -599,7 +589,7 @@
 }
 
 .content-section h2 {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Marcellus", serif;
   font-size: 36px;
   line-height: 46px;
@@ -614,7 +604,7 @@
 }
 
 .content-section p {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--solis-text-tertiary);
   font-family: "Jost", sans-serif;
   font-size: 16px;
   line-height: 26px;
@@ -629,7 +619,7 @@
 
 .content-section ul.focus-list li,
 .company-detail ul.focus-list li {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--solis-text-tertiary);
   font-family: "Jost", sans-serif;
   font-size: 16px;
   line-height: 28px;
@@ -672,7 +662,7 @@
   height: 340px;
   border-radius: 12px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--solis-card-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -702,7 +692,7 @@
 }
 
 .leader-profile .leader-info p {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--solis-text-tertiary);
   font-family: "Jost", sans-serif;
   font-size: 16px;
   line-height: 26px;
@@ -732,14 +722,14 @@
 }
 
 .company-detail h2 {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Marcellus", serif;
   font-size: 32px;
   margin-bottom: 20px;
 }
 
 .company-detail p {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--solis-text-tertiary);
   font-family: "Jost", sans-serif;
   font-size: 16px;
   line-height: 26px;
@@ -747,7 +737,7 @@
 }
 
 .company-detail .deliverables h3 {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Marcellus", serif;
   font-size: 24px;
   margin-bottom: 16px;
@@ -757,7 +747,7 @@
    Partner audience cards
    ------------------------------------------------ */
 .partner-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--solis-card-bg);
   border: 1px solid var(--solis-border);
   border-radius: 10px;
   padding: 36px 28px;
@@ -771,14 +761,14 @@
 }
 
 .partner-card h3 {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Marcellus", serif;
   font-size: 22px;
   margin-bottom: 12px;
 }
 
 .partner-card p {
-  color: var(--solis-gray);
+  color: var(--solis-text-secondary);
   font-family: "Jost", sans-serif;
   font-size: 15px;
   line-height: 24px;
@@ -799,7 +789,7 @@
   padding: 8px 18px;
   border: 1px solid var(--solis-border);
   border-radius: 20px;
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Work Sans", sans-serif;
   font-size: 14px;
   transition: all 0.3s ease;
@@ -830,20 +820,20 @@
   padding: 14px 20px;
   border: 1px solid var(--solis-border);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--solis-white);
+  background: var(--solis-card-bg);
+  color: var(--solis-text);
   font-family: "Jost", sans-serif;
   font-size: 15px;
 }
 
 .newsletter-form input::placeholder {
-  color: var(--solis-gray);
+  color: var(--solis-text-secondary);
 }
 
 .newsletter-form button {
   padding: 14px 28px;
   background: var(--solis-primary);
-  color: var(--solis-white);
+  color: var(--solis-text);
   border-radius: 6px;
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
@@ -854,7 +844,7 @@
 
 .newsletter-form button:hover {
   background: var(--solis-accent);
-  color: var(--solis-dark);
+  color: var(--solis-text-on-accent);
 }
 
 /* ------------------------------------------------
@@ -865,7 +855,7 @@
 }
 
 .contact-form label {
-  color: var(--solis-white);
+  color: var(--solis-text);
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -880,8 +870,8 @@
   padding: 14px 18px;
   border: 1px solid var(--solis-border);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--solis-white);
+  background: var(--solis-card-bg);
+  color: var(--solis-text);
   font-family: "Jost", sans-serif;
   font-size: 15px;
   transition: border-color 0.3s ease;

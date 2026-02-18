@@ -1,0 +1,87 @@
+/* ================================================
+   Solis Group — BLACK THEME (Dark)
+   Current default theme. All visual color tokens
+   are defined here. To switch themes, swap this
+   file for white.css in the HTML <head>.
+   ================================================ */
+
+:root {
+    /* ---- Core palette ---- */
+    --solis-body: #001d21;
+    --solis-surface: #01272d;
+    /* cards, elevated surfaces          */
+    --solis-surface-hover: #023640;
+    /* surface on hover                  */
+
+    /* ---- Brand colors ---- */
+    --solis-primary: #0e59f2;
+    /* blue — buttons, links             */
+    --solis-primary-hover: #0b47c2;
+    /* darker blue on hover              */
+    --solis-accent: #d4a017;
+    /* gold — subtitles, highlights      */
+    --solis-accent-light: #e8bf4a;
+    /* lighter gold                      */
+
+    /* ---- Text ---- */
+    --solis-text: #ffffff;
+    --solis-text-secondary: #94a3b8;
+    /* muted body copy                   */
+    --solis-text-tertiary: rgba(255, 255, 255, 0.75);
+    --solis-text-on-primary: #ffffff;
+    /* text sitting on primary bg        */
+    --solis-text-on-accent: #010d12;
+    /* text sitting on accent bg         */
+
+    /* ---- Borders & overlays ---- */
+    --solis-border: rgba(255, 255, 255, 0.08);
+    --solis-border-hover: rgba(255, 255, 255, 0.18);
+    --solis-overlay: rgba(0, 29, 33, 0.82);
+    --solis-card-bg: rgba(255, 255, 255, 0.03);
+    --solis-card-bg-hover: rgba(255, 255, 255, 0.06);
+
+    /* ---- Navbar (template overrides) ---- */
+    --solis-nav-bg: #001d21;
+    --solis-nav-text: #ffffff;
+    --solis-nav-hover: #0e59f2;
+    --solis-nav-dropdown-bg: #001d21;
+    --solis-nav-dropdown-hover: #0e59f2;
+    --solis-offcanvas-bg: #001d21;
+
+    /* ---- Footer ---- */
+    --solis-footer-text: #ffffff;
+    --solis-footer-link: #ffffff;
+    --solis-footer-link-hover: #d4a017;
+    --solis-footer-social-bg: #ffffff;
+    --solis-footer-social-icon: #0e59f2;
+    --solis-footer-social-hover-bg: #d4a017;
+    --solis-footer-social-hover-icon: #010d12;
+
+    /* ---- Misc ---- */
+    --solis-selection-bg: #0e59f2;
+    --solis-selection-text: #ffffff;
+    --solis-loader-bg: #001d21;
+    --solis-scrollbar-track: #001d21;
+    --solis-scrollbar-thumb: #0e59f2;
+    --solis-icon-bg: rgba(14, 89, 242, 0.1);
+    --solis-icon-color: #0e59f2;
+
+    /* ---- Shadows ---- */
+    --solis-shadow-card: 0 20px 60px rgba(14, 89, 242, 0.08);
+    --solis-shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+    /* ---- Gradients (platform card icons) ---- */
+    --solis-gradient-engineering: linear-gradient(135deg, #2563eb, #1d4ed8);
+    --solis-gradient-greymatter: linear-gradient(135deg, #475569, #334155);
+    --solis-gradient-forum: linear-gradient(135deg, #7c3aed, #6d28d9);
+    --solis-gradient-culture: linear-gradient(135deg, #d97706, #b45309);
+
+    /* ---- Page hero ---- */
+    --solis-hero-gradient: linear-gradient(180deg, rgba(14, 89, 242, 0.06) 0%, transparent 100%);
+
+    /* ---- What-we-do hover ---- */
+    --solis-wwd-hover-bg: rgba(212, 160, 23, 0.05);
+
+    /* ---- Button border animation ---- */
+    --solis-btn-border: #0e59f2;
+}

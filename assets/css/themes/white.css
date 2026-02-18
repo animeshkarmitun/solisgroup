@@ -1,0 +1,356 @@
+/* ================================================
+   Solis Group — WHITE THEME (Light)
+   Clean, professional light theme. Swap this for
+   black.css in the HTML <head> to activate.
+   ================================================ */
+
+:root {
+    /* ---- Core palette ---- */
+    --solis-body: #f8f9fb;
+    --solis-surface: #ffffff;
+    /* cards, elevated surfaces          */
+    --solis-surface-hover: #f1f3f7;
+    /* surface on hover                  */
+
+    /* ---- Brand colors ---- */
+    --solis-primary: #0e59f2;
+    /* blue — stays consistent           */
+    --solis-primary-hover: #0b47c2;
+    --solis-accent: #b8860b;
+    /* darker gold for readability on white */
+    --solis-accent-light: #d4a017;
+
+    /* ---- Text ---- */
+    --solis-text: #1a1a2e;
+    --solis-text-secondary: #5a6577;
+    --solis-text-tertiary: rgba(26, 26, 46, 0.72);
+    --solis-text-on-primary: #ffffff;
+    --solis-text-on-accent: #ffffff;
+
+    /* ---- Borders & overlays ---- */
+    --solis-border: rgba(0, 0, 0, 0.08);
+    --solis-border-hover: rgba(0, 0, 0, 0.16);
+    --solis-overlay: rgba(248, 249, 251, 0.92);
+    --solis-card-bg: #ffffff;
+    --solis-card-bg-hover: #f5f7fa;
+
+    /* ---- Navbar (template overrides) ---- */
+    --solis-nav-bg: #ffffff;
+    --solis-nav-text: #1a1a2e;
+    --solis-nav-hover: #0e59f2;
+    --solis-nav-dropdown-bg: #ffffff;
+    --solis-nav-dropdown-hover: #0e59f2;
+    --solis-offcanvas-bg: #ffffff;
+
+    /* ---- Footer ---- */
+    --solis-footer-text: #ffffff;
+    --solis-footer-link: #ffffff;
+    --solis-footer-link-hover: #d4a017;
+    --solis-footer-social-bg: #ffffff;
+    --solis-footer-social-icon: #0e59f2;
+    --solis-footer-social-hover-bg: #d4a017;
+    --solis-footer-social-hover-icon: #ffffff;
+
+    /* ---- Misc ---- */
+    --solis-selection-bg: #0e59f2;
+    --solis-selection-text: #ffffff;
+    --solis-loader-bg: #f8f9fb;
+    --solis-scrollbar-track: #f0f0f0;
+    --solis-scrollbar-thumb: #0e59f2;
+    --solis-icon-bg: rgba(14, 89, 242, 0.08);
+    --solis-icon-color: #0e59f2;
+
+    /* ---- Shadows ---- */
+    --solis-shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --solis-shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.08);
+
+    /* ---- Gradients (platform card icons) ---- */
+    --solis-gradient-engineering: linear-gradient(135deg, #2563eb, #1d4ed8);
+    --solis-gradient-greymatter: linear-gradient(135deg, #64748b, #475569);
+    --solis-gradient-forum: linear-gradient(135deg, #7c3aed, #6d28d9);
+    --solis-gradient-culture: linear-gradient(135deg, #d97706, #b45309);
+
+    /* ---- Page hero ---- */
+    --solis-hero-gradient: linear-gradient(180deg, rgba(14, 89, 242, 0.04) 0%, transparent 100%);
+
+    /* ---- What-we-do hover ---- */
+    --solis-wwd-hover-bg: rgba(184, 134, 11, 0.06);
+
+    /* ---- Button border animation ---- */
+    --solis-btn-border: #0e59f2;
+}
+
+/* ================================================
+   WHITE THEME — Template color overrides
+   These override the hardcoded hex values baked
+   into nav-2.css, footer-2.css, home-2.css, and
+   common.css by the Acnalys template.
+   ================================================ */
+
+/* --- Global body --- */
+body {
+    background-color: var(--solis-body) !important;
+    color: var(--solis-text) !important;
+}
+
+/* --- Navbar --- */
+.navbar .container-fluid .navbar-nav .nav-item .nav-link {
+    color: var(--solis-nav-text) !important;
+}
+
+.navbar .container-fluid .navbar-nav .nav-item .nav-link:hover {
+    color: var(--solis-nav-hover) !important;
+}
+
+.navbar .container-fluid .navbar-nav .nav-item.dropdown .dropdown-menu {
+    background-color: var(--solis-nav-dropdown-bg) !important;
+    border: 1px solid var(--solis-border);
+    box-shadow: var(--solis-shadow-elevated);
+}
+
+.navbar .container-fluid .navbar-nav .nav-item.dropdown .dropdown-menu a {
+    color: var(--solis-nav-text) !important;
+}
+
+.navbar .container-fluid .navbar-nav .nav-item.dropdown .dropdown-menu a:hover,
+.navbar .container-fluid .navbar-nav .nav-item.dropdown .dropdown-menu a.active {
+    background-color: var(--solis-nav-dropdown-hover) !important;
+    color: var(--solis-text-on-primary) !important;
+}
+
+.navbar .container-fluid .navbar-toggler .toggle-btn {
+    border-color: var(--solis-primary) !important;
+    color: var(--solis-nav-text) !important;
+}
+
+.navbar .container-fluid .menu-wrapper {
+    border-left-color: var(--solis-border) !important;
+}
+
+/* Sticky header background */
+.header--sticky {
+    background-color: var(--solis-nav-bg) !important;
+}
+
+/* --- Offcanvas (mobile nav) --- */
+.offcanvas {
+    background-color: var(--solis-offcanvas-bg) !important;
+}
+
+.offcanvas .navbar-nav .nav-item .nav-link {
+    color: var(--solis-nav-text) !important;
+}
+
+.offcanvas .offcanvas-close {
+    color: var(--solis-primary) !important;
+}
+
+.offcanvas .navbar-nav .nav-item.dropdown .dropdown-menu {
+    background-color: var(--solis-primary) !important;
+}
+
+.offcanvas .navbar-nav .nav-item.dropdown .nav-link {
+    color: var(--solis-nav-text) !important;
+}
+
+/* --- Banner/hero --- */
+.banner {
+    background-color: var(--solis-body) !important;
+}
+
+.banner .overlay .banner-section .heading,
+.banner h1 {
+    color: var(--solis-text) !important;
+}
+
+.banner .overlay .banner-section .vision-mission p {
+    color: var(--solis-text-tertiary) !important;
+}
+
+.banner .overlay .social-link p {
+    color: var(--solis-text-secondary) !important;
+}
+
+.banner .overlay .social-link .social-icon li a {
+    color: var(--solis-text-secondary) !important;
+}
+
+.banner .overlay .social-link .social-icon li a:hover {
+    color: var(--solis-primary) !important;
+}
+
+/* --- Section titles --- */
+.section-title .title,
+.title {
+    color: var(--solis-text) !important;
+}
+
+/* --- What We Do --- */
+.what-we-do-item {
+    background: var(--solis-card-bg) !important;
+    border-color: var(--solis-border) !important;
+    box-shadow: var(--solis-shadow-card);
+}
+
+.what-we-do-item:hover {
+    background: var(--solis-card-bg-hover) !important;
+}
+
+.what-we-do-item h3 {
+    color: var(--solis-text) !important;
+}
+
+.what-we-do-item p {
+    color: var(--solis-text-secondary) !important;
+}
+
+/* --- Platform cards --- */
+.platform-card {
+    background: var(--solis-card-bg) !important;
+    border-color: var(--solis-border) !important;
+    box-shadow: var(--solis-shadow-card);
+}
+
+.platform-card:hover {
+    box-shadow: var(--solis-shadow-elevated) !important;
+}
+
+.platform-card h3 {
+    color: var(--solis-text) !important;
+}
+
+.platform-card p {
+    color: var(--solis-text-secondary) !important;
+}
+
+/* --- Vision banner — keep dark even in white theme --- */
+.vision-banner .overlay {
+    background-color: rgba(0, 29, 33, 0.88) !important;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    background: var(--solis-surface) !important;
+}
+
+.cta-section h2 {
+    color: var(--solis-text) !important;
+}
+
+.cta-section p {
+    color: var(--solis-text-secondary) !important;
+}
+
+/* --- Page hero (inner pages) --- */
+.page-hero {
+    background: var(--solis-hero-gradient) !important;
+}
+
+.page-hero h1 {
+    color: var(--solis-text) !important;
+}
+
+/* --- Content sections (inner pages) --- */
+.content-section h2 {
+    color: var(--solis-text) !important;
+}
+
+.content-section p {
+    color: var(--solis-text-tertiary) !important;
+}
+
+.content-section ul.focus-list li {
+    color: var(--solis-text-tertiary) !important;
+}
+
+/* --- Company detail (inner pages) --- */
+.company-detail h2 {
+    color: var(--solis-text) !important;
+}
+
+.company-detail p {
+    color: var(--solis-text-tertiary) !important;
+}
+
+.company-detail .deliverables h3 {
+    color: var(--solis-text) !important;
+}
+
+/* --- Partner cards --- */
+.partner-card {
+    background: var(--solis-card-bg) !important;
+    border-color: var(--solis-border) !important;
+    box-shadow: var(--solis-shadow-card);
+}
+
+.partner-card h3 {
+    color: var(--solis-text) !important;
+}
+
+.partner-card p {
+    color: var(--solis-text-secondary) !important;
+}
+
+/* --- Leader profile --- */
+.leader-profile .leader-info h2 {
+    color: var(--solis-text) !important;
+}
+
+.leader-profile .leader-info p {
+    color: var(--solis-text-tertiary) !important;
+}
+
+.leader-profile .leader-photo {
+    background: var(--solis-surface) !important;
+    box-shadow: var(--solis-shadow-card);
+}
+
+/* --- Insight tags --- */
+.insight-tag {
+    color: var(--solis-text) !important;
+    border-color: var(--solis-border) !important;
+}
+
+/* --- Newsletter form --- */
+.newsletter-form input {
+    background: var(--solis-surface) !important;
+    color: var(--solis-text) !important;
+    border-color: var(--solis-border) !important;
+}
+
+/* --- Contact form --- */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    background: var(--solis-surface) !important;
+    color: var(--solis-text) !important;
+    border-color: var(--solis-border) !important;
+}
+
+.contact-form label {
+    color: var(--solis-text) !important;
+}
+
+/* --- Loader --- */
+.loader-wrapper,
+.loader-section {
+    background-color: var(--solis-loader-bg) !important;
+}
+
+/* --- Progress/scroll-to-top --- */
+.progress-wrap {
+    background-color: var(--solis-primary) !important;
+}
+
+/* --- Button overrides for contrast --- */
+.button::before,
+.button::after {
+    border-color: var(--solis-btn-border) !important;
+}
+
+.button:hover {
+    color: var(--solis-primary) !important;
+}
+
+/* --- Footer stays dark in both themes for brand consistency --- */
+/* (Footer styles are not overridden — it remains dark)         */
