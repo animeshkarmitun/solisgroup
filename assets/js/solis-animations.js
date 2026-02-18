@@ -420,6 +420,178 @@
     }
 
 
+    /* ===============================================
+       TEXT EFFECTS — Premium Typography Motion
+       =============================================== */
+
+
+    /* -----------------------------------------------
+       12. GRADIENT SHIMMER (auto-apply)
+       Adds the .text-shimmer class to the hero
+       heading for a metallic light sweep.
+       ----------------------------------------------- */
+    function initTextShimmer() {
+        // Apply to the main hero heading
+        var heroHeading = document.querySelector('.banner .heading');
+        if (heroHeading) {
+            heroHeading.classList.add('text-shimmer');
+        }
+
+        // Apply single-shimmer to section titles on scroll
+        var sectionTitles = document.querySelectorAll('.section-title .title');
+        sectionTitles.forEach(function (title) {
+            title.classList.add('text-shimmer-once');
+        });
+    }
+
+
+    /* -----------------------------------------------
+       13. WORD-BY-WORD REVEAL
+       Splits text of .title elements into individual
+       word <span> wrappers and reveals them one by one
+       on scroll via IntersectionObserver.
+       ----------------------------------------------- */
+    function initWordReveal() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        // Target section title headings (not the hero — that has its own entrance)
+        var titles = document.querySelectorAll('.section-title .title');
+        if (!titles.length) return;
+
+        titles.forEach(function (el) {
+            // Skip if already processed
+            if (el.classList.contains('word-reveal')) return;
+
+            // Get the text content, strip extra whitespace
+            var text = el.textContent.replace(/\s+/g, ' ').trim();
+            var words = text.split(' ');
+
+            // Build the word-wrapped HTML
+            var html = words.map(function (word) {
+                return '<span class="word-wrap"><span class="word">' + word + '</span></span>';
+            }).join(' ');
+
+            el.innerHTML = html;
+            el.classList.add('word-reveal');
+        });
+
+        // Observer to trigger reveal
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        document.querySelectorAll('.word-reveal').forEach(function (el) {
+            observer.observe(el);
+        });
+    }
+
+
+    /* -----------------------------------------------
+       14. KEYWORD HIGHLIGHT WIPE
+       Auto-detects <strong>/<b> tags in body text
+       and adds a gold underline that wipes in on scroll.
+       ----------------------------------------------- */
+    function initKeywordHighlight() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        // Target specific content areas
+        var contentAreas = document.querySelectorAll(
+            '.what-we-do-item p, .vision-banner p, .vision-mission p, ' +
+            '.cta-section p, .about-content p, .company-hero-detail p'
+        );
+
+        var highlights = [];
+
+        contentAreas.forEach(function (el) {
+            // Find <strong> and <b> elements inside
+            var strongTags = el.querySelectorAll('strong, b');
+            strongTags.forEach(function (tag) {
+                if (!tag.classList.contains('text-highlight')) {
+                    tag.classList.add('text-highlight');
+                    highlights.push(tag);
+                }
+            });
+        });
+
+        // Also apply to specific keywords via data attribute
+        document.querySelectorAll('[data-highlight]').forEach(function (el) {
+            if (!el.classList.contains('text-highlight')) {
+                el.classList.add('text-highlight');
+                highlights.push(el);
+            }
+        });
+
+        if (!highlights.length) return;
+
+        // Observer to trigger highlight
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    // Small delay for cascading effect
+                    setTimeout(function () {
+                        entry.target.classList.add('highlighted');
+                    }, 200);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '0px 0px -20px 0px'
+        });
+
+        highlights.forEach(function (el) {
+            observer.observe(el);
+        });
+    }
+
+
+    /* -----------------------------------------------
+       15. BLUR-TO-FOCUS
+       Applied to CTA section heading and
+       vision banner title for cinematic reveal.
+       ----------------------------------------------- */
+    function initBlurFocus() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        // Auto-apply to specific elements
+        var targets = document.querySelectorAll(
+            '.cta-section h2, .vision-banner h2, .vision-banner h3'
+        );
+
+        targets.forEach(function (el) {
+            if (el.classList.contains('blur-focus')) return;
+            el.classList.add('blur-focus');
+        });
+
+        var blurElements = document.querySelectorAll('.blur-focus');
+        if (!blurElements.length) return;
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('focused');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        blurElements.forEach(function (el) {
+            observer.observe(el);
+        });
+    }
+
+
     /* -----------------------------------------------
        INIT — run everything on DOM ready
        ----------------------------------------------- */
@@ -436,6 +608,12 @@
         initCustomCursor();
         initMultiLayerParallax();
         initSmoothAnchorScroll();
+
+        // Text effects
+        initTextShimmer();
+        initWordReveal();
+        initKeywordHighlight();
+        initBlurFocus();
     }
 
     // Enhanced preloader must bind before window.load

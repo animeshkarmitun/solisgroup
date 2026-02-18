@@ -641,6 +641,214 @@ html {
     }
 }
 
+/* ================================================
+   TEXT EFFECTS — Premium Typography Motion
+   ================================================ */
+
+
+/* ------------------------------------------------
+   16. GRADIENT SHIMMER ON HERO HEADING
+   A metallic light sweep across the main heading.
+   Apple-style premium text effect.
+   ------------------------------------------------ */
+.text-shimmer {
+    background: linear-gradient(90deg,
+            var(--solis-text, #1a1a2e) 0%,
+            var(--solis-text, #1a1a2e) 40%,
+            var(--solis-accent, #d4a017) 50%,
+            var(--solis-text, #1a1a2e) 60%,
+            var(--solis-text, #1a1a2e) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerSweep 4s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes shimmerSweep {
+    0% {
+        background-position: 200% center;
+    }
+
+    40% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+/* Second variant - single sweep on load, no loop */
+.text-shimmer-once {
+    background: linear-gradient(90deg,
+            var(--solis-text, #1a1a2e) 0%,
+            var(--solis-text, #1a1a2e) 40%,
+            var(--solis-primary, #0e59f2) 50%,
+            var(--solis-text, #1a1a2e) 60%,
+            var(--solis-text, #1a1a2e) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerSweep 2.5s ease-in-out 1;
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
+}
+
+
+/* ------------------------------------------------
+   17. WORD-BY-WORD REVEAL
+   Each word slides up individually with stagger.
+   JS splits text into <span> wrappers.
+   ------------------------------------------------ */
+.word-reveal .word-wrap {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.word-reveal .word-wrap .word {
+    display: inline-block;
+    transform: translateY(105%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+.word-reveal.revealed .word-wrap .word {
+    transform: translateY(0);
+}
+
+/* Stagger delays for each word */
+.word-reveal .word-wrap:nth-child(1) .word {
+    transition-delay: 0s;
+}
+
+.word-reveal .word-wrap:nth-child(2) .word {
+    transition-delay: 0.05s;
+}
+
+.word-reveal .word-wrap:nth-child(3) .word {
+    transition-delay: 0.1s;
+}
+
+.word-reveal .word-wrap:nth-child(4) .word {
+    transition-delay: 0.15s;
+}
+
+.word-reveal .word-wrap:nth-child(5) .word {
+    transition-delay: 0.2s;
+}
+
+.word-reveal .word-wrap:nth-child(6) .word {
+    transition-delay: 0.25s;
+}
+
+.word-reveal .word-wrap:nth-child(7) .word {
+    transition-delay: 0.3s;
+}
+
+.word-reveal .word-wrap:nth-child(8) .word {
+    transition-delay: 0.35s;
+}
+
+.word-reveal .word-wrap:nth-child(9) .word {
+    transition-delay: 0.4s;
+}
+
+.word-reveal .word-wrap:nth-child(10) .word {
+    transition-delay: 0.45s;
+}
+
+
+/* ------------------------------------------------
+   18. KEYWORD HIGHLIGHT WIPE
+   A gold underline/highlight draws in from left
+   on key words when scrolled into view.
+   ------------------------------------------------ */
+.text-highlight {
+    position: relative;
+    display: inline;
+    padding: 0 2px;
+}
+
+.text-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 30%;
+    background: var(--solis-accent, #d4a017);
+    opacity: 0.18;
+    z-index: -1;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 2px;
+}
+
+.text-highlight.highlighted::after {
+    width: 100%;
+}
+
+/* Stronger variant for emphasis */
+.text-highlight-strong::after {
+    height: 40%;
+    opacity: 0.25;
+}
+
+
+/* ------------------------------------------------
+   19. BLUR-TO-FOCUS ON SCROLL
+   Section titles start blurred and sharpen
+   as the user scrolls to them.
+   ------------------------------------------------ */
+.blur-focus {
+    filter: blur(8px);
+    opacity: 0.3;
+    transition: filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: filter, opacity;
+}
+
+.blur-focus.focused {
+    filter: blur(0);
+    opacity: 1;
+}
+
+
+/* ------------------------------------------------
+   20. TYPEWRITER-STYLE CURSOR BLINK
+   Used on the hero subtitle for a tech feel.
+   ------------------------------------------------ */
+.text-typing::after {
+    content: '|';
+    color: var(--solis-accent, #d4a017);
+    font-weight: 300;
+    animation: cursorBlink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+.text-typing.done::after {
+    display: none;
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* ------------------------------------------------
+   Reduced motion overrides for text effects
+   ------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
     .hero-grain::before {
         animation: none;
@@ -651,6 +859,33 @@ html {
     }
 
     .loader-wrapper .loader::before {
+        animation: none;
+    }
+
+    .text-shimmer,
+    .text-shimmer-once {
+        animation: none;
+        -webkit-text-fill-color: var(--solis-text, #1a1a2e);
+        background: none;
+    }
+
+    .word-reveal .word-wrap .word {
+        transform: none;
+        transition: none;
+    }
+
+    .blur-focus {
+        filter: none;
+        opacity: 1;
+        transition: none;
+    }
+
+    .text-highlight::after {
+        width: 100%;
+        transition: none;
+    }
+
+    .text-typing::after {
         animation: none;
     }
 }
