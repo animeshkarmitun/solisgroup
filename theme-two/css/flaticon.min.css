@@ -1,0 +1,71 @@
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after{font-family:Flaticon;font-style:normal;}
+
+.wt-icon-box-xl [class^="flaticon-"]:before, .wt-icon-box-xl [class*=" flaticon-"]:before,
+.wt-icon-box-xl [class^="flaticon-"]:after, .wt-icon-box-xl [class*=" flaticon-"]:after{font-size:96px;}
+.wt-icon-box-lg [class^="flaticon-"]:before, .wt-icon-box-lg [class*=" flaticon-"]:before,
+.wt-icon-box-lg [class^="flaticon-"]:after, .wt-icon-box-lg [class*=" flaticon-"]:after{font-size:72px;}
+.wt-icon-box-md [class^="flaticon-"]:before, .wt-icon-box-md [class*=" flaticon-"]:before,
+.wt-icon-box-md [class^="flaticon-"]:after, .wt-icon-box-md [class*=" flaticon-"]:after{font-size:48px;}
+.wt-icon-box-sm [class^="flaticon-"]:before, .wt-icon-box-sm [class*=" flaticon-"]:before,
+.wt-icon-box-sm [class^="flaticon-"]:after, .wt-icon-box-sm [class*=" flaticon-"]:after{font-size:36px;}
+.wt-icon-box-xs [class^="flaticon-"]:before, .wt-icon-box-xs [class*=" flaticon-"]:before,
+.wt-icon-box-xs [class^="flaticon-"]:after, .wt-icon-box-xs [class*=" flaticon-"]:after{font-size:24px;}
+
+
+
+
+.flaticon-time-passing:before { content: "\f100"; }
+.flaticon-smartphone:before { content: "\f101"; }
+.flaticon-hotel:before { content: "\f102"; }
+.flaticon-sketching:before { content: "\f103"; }
+.flaticon-trophy:before { content: "\f104"; }
+.flaticon-support:before { content: "\f105"; }
+.flaticon-diamond:before { content: "\f106"; }
+.flaticon-paint-brushes:before { content: "\f107"; }
+.flaticon-decorating:before { content: "\f108"; }
+.flaticon-skyline:before { content: "\f109"; }
+.flaticon-factory:before { content: "\f10a"; }
+.flaticon-architect-with-helmet:before { content: "\f10b"; }
+.flaticon-tools:before { content: "\f10c"; }
+.flaticon-worker-of-construction-working-with-a-shovel-beside-material-pile:before { content: "\f10d"; }
+.flaticon-crane:before { content: "\f10e"; }
+.flaticon-drawing:before { content: "\f10f"; }
+.flaticon-wall:before { content: "\f110"; }
+.flaticon-pipe:before { content: "\f111"; }
+.flaticon-plumber-working:before { content: "\f112"; }
+.flaticon-pipes:before { content: "\f113"; }
+.flaticon-paint-roller:before { content: "\f114"; }
+.flaticon-drawing-architecture-project-of-a-house:before { content: "\f115"; }
+.flaticon-construction-worker:before { content: "\f116"; }
+.flaticon-welder:before { content: "\f117"; }
+.flaticon-builder:before { content: "\f118"; }
+.flaticon-road:before { content: "\f119"; }
+.flaticon-modern-house:before { content: "\f11a"; }
+.flaticon-barrier:before { content: "\f11b"; }
+.flaticon-interior-design:before { content: "\f11c"; }
+.flaticon-sketch:before { content: "\f11d"; }
+.flaticon-helmet:before { content: "\f11e"; }
+.flaticon-settings:before { content: "\f11f"; }
+.flaticon-driller:before { content: "\f120"; }
+.flaticon-email:before { content: "\f121"; }
+.flaticon-pin:before { content: "\f122"; }
+.flaticon-fax:before { content: "\f123"; }
