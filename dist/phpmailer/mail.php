@@ -34,17 +34,17 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'mahak@artncraftsonline.com';                     //SMTP username
-    $mail->Password   = 'Mahak##2020';  */                             //SMTP password
+    $mail->Username   = 'business@solisgroup.ltd';                     //SMTP username
+    $mail->Password   = 'Mahak##2020';                           //SMTP password
 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 	$mail->SMTPDebug  = 0;
 
     //Recipients
-    $mail->setFrom('help@thewebmax.org', 'thewebmax');
-    $mail->addAddress('thewebmaxhelp@gmail.com', 'The Webmax Support');     //Add a recipient
-    $mail->addReplyTo('thewebmaxhelp@gmail.com', 'Information');
+    $mail->setFrom('business@solisgroup.ltd', 'thewebmax');
+    $mail->addAddress('business@solisgroup.ltd', 'The Webmax Support');     //Add a recipient
+    $mail->addReplyTo('business@solisgroup.ltd', 'Information');
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML

@@ -10,10 +10,10 @@ print_r($_POST);exit;
     $mail->Port = 465;
     $mail->SMTPDebug = 1;
     $mail->SMTPAuth = true;
-    $mail->Username = 'mahak@artncraftsonline.com';
+    $mail->Username = 'business@solisgroup.ltd';
     $mail->Password = 'Mahak##2020';
-    $mail->setFrom('mahak@artncraftsonline.com', 'Mahak Art n Craft');
-    $mail->addAddress('vikas.panwar085@gmail.com', 'Vikas Panwar');
+    $mail->setFrom('website@solisgroup.ltd', 'Website');
+    $mail->addAddress('business@solisgroup.ltd', 'Business');
     if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
         $mail->Subject = 'PHPMailer contact form';
         $mail->isHTML(false);
