@@ -1,3 +1,104 @@
-/*===================================== 
-YOU CAN WRIGHT CUSTOME CSS 
-======================================*/
+/*===================================== 
+CUSTOM CSS - Solis Group
+======================================*/
+
+/* ===== HEADER INLINE NAV (replaces Search/Share) ===== */
+.header-inline-nav {
+    display: flex;
+    align-items: center;
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 0;
+}
+
+.header-inline-nav > li {
+    position: relative;
+    display: inline-block;
+}
+
+.header-inline-nav > li > a {
+    display: block;
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a2e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.header-inline-nav > li > a:hover,
+.header-inline-nav > li > a:focus {
+    color: #e8a829;
+    text-decoration: none;
+}
+
+/* Dropdown for desktop inline nav */
+.header-inline-nav > li > .header-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+    padding: 8px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.header-inline-nav > li:hover > .header-dropdown {
+    display: block;
+}
+
+.header-inline-nav > li > .header-dropdown > li > a {
+    display: block;
+    padding: 8px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.header-inline-nav > li > .header-dropdown > li > a:hover {
+    color: #e8a829;
+    background: #fafafa;
+    padding-left: 24px;
+}
+
+/* Wrapper for the inline nav inside wt-header-right */
+.extra-nav.header-nav-desktop {
+    float: left;
+    padding: 8px 0;
+}
+
+/* ===== RESPONSIVE: Hamburger only on tablet & mobile ===== */
+
+/* Desktop (≥992px): show inline nav, hide hamburger */
+@media (min-width: 992px) {
+    .extra-nav.header-nav-desktop {
+        display: block;
+    }
+    .extra-nav.header-hamburger-only {
+        display: none !important;
+    }
+}
+
+/* Tablet & Mobile (<992px): hide inline nav, show hamburger */
+@media (max-width: 991px) {
+    .extra-nav.header-nav-desktop {
+        display: none !important;
+    }
+    .extra-nav.header-hamburger-only {
+        display: block;
+    }
+}
