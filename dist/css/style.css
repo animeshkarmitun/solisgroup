@@ -7899,7 +7899,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 	position: absolute;
 	left: 0px;
 	top: 15px;
-	background-color: rgba(0, 0, 0, 0.2);
+	/* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .extra-nav .extra-cell {
