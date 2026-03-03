@@ -13,12 +13,12 @@ CUSTOM CSS - Solis Group
     gap: 0;
 }
 
-.header-inline-nav > li {
+.header-inline-nav>li {
     position: relative;
     display: inline-block;
 }
 
-.header-inline-nav > li > a {
+.header-inline-nav>li>a {
     display: block;
     padding: 10px 14px;
     font-family: 'Poppins', sans-serif;
@@ -32,33 +32,34 @@ CUSTOM CSS - Solis Group
     white-space: nowrap;
 }
 
-.header-inline-nav > li > a:hover,
-.header-inline-nav > li > a:focus {
+.header-inline-nav>li>a:hover,
+.header-inline-nav>li>a:focus {
     color: #e8a829;
     text-decoration: none;
 }
 
 /* Dropdown for desktop inline nav */
-.header-inline-nav > li > .header-dropdown {
+.header-inline-nav>li>.header-dropdown {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 240px;
+    width: max-content;
+    text-align: left;
     background: #fff;
     border: 1px solid #eee;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     z-index: 999;
     padding: 8px 0;
     list-style: none;
     margin: 0;
 }
 
-.header-inline-nav > li:hover > .header-dropdown {
+.header-inline-nav>li:hover>.header-dropdown {
     display: block;
 }
 
-.header-inline-nav > li > .header-dropdown > li > a {
+.header-inline-nav>li>.header-dropdown>li>a {
     display: block;
     padding: 8px 20px;
     font-family: 'Poppins', sans-serif;
@@ -69,7 +70,7 @@ CUSTOM CSS - Solis Group
     transition: all 0.25s ease;
 }
 
-.header-inline-nav > li > .header-dropdown > li > a:hover {
+.header-inline-nav>li>.header-dropdown>li>a:hover {
     color: #e8a829;
     background: #fafafa;
     padding-left: 24px;
@@ -88,6 +89,7 @@ CUSTOM CSS - Solis Group
     .extra-nav.header-nav-desktop {
         display: block;
     }
+
     .extra-nav.header-hamburger-only {
         display: none !important;
     }
@@ -98,7 +100,36 @@ CUSTOM CSS - Solis Group
     .extra-nav.header-nav-desktop {
         display: none !important;
     }
+
     .extra-nav.header-hamburger-only {
         display: block;
+    }
+}
+
+/* ===== NEW HEADER LAYOUT OVERRIDES ===== */
+@media (min-width: 1271px) {
+    .header-center .wt-header-left {
+        width: 20%;
+    }
+
+    .header-center .wt-header-center {
+        width: 60%;
+        text-align: center;
+    }
+
+    .header-center .wt-header-center .extra-nav.header-nav-desktop {
+        float: none;
+        display: inline-block;
+    }
+
+    .header-center .wt-header-right {
+        width: 20%;
+        text-align: right;
+    }
+
+    .header-center .wt-header-right .e-p-bx {
+        float: right;
+        margin-top: 15px;
+        /* adjust vertical alignment if necessary */
     }
 }

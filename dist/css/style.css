@@ -2550,7 +2550,7 @@ ol.list-num-count.list-outline-none>li:before {
 	3. background image
 -------------------------------------*/
 .bg-parallax {
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -6156,6 +6156,10 @@ label {
 	font-size: 13px;
 	line-height: 20px;
 	padding: 9px 12px 9px 10px;
+}
+
+textarea.form-control {
+	height: auto;
 }
 
 .form-control:focus {

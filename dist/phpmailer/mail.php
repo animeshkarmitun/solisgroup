@@ -15,7 +15,8 @@ if ( isset( $_POST['action'] ) ){
 $name = filter_var( $_POST['username'], FILTER_SANITIZE_STRING );
 $from_email = filter_var( $_POST['email'], FILTER_SANITIZE_EMAIL );
 $phone = filter_var( $_POST['phone'], FILTER_SANITIZE_STRING );
-$subject = filter_var( $_POST['subject'], FILTER_SANITIZE_STRING );
+// Hardcode the subject as requested
+$subject = "Contact from solisgroup website";
 $message = filter_var( $_POST['message'], FILTER_SANITIZE_STRING );
 
 $email_body = "You have Received a message from: " . $name . " <br/>";
@@ -42,9 +43,9 @@ try {
 	$mail->SMTPDebug  = 0;
 
     //Recipients
-    $mail->setFrom('business@solisgroup.ltd', 'thewebmax');
-    $mail->addAddress('business@solisgroup.ltd', 'The Webmax Support');     //Add a recipient
-    $mail->addReplyTo('business@solisgroup.ltd', 'Information');
+    $mail->setFrom('business@solisgroup.ltd', 'Solis Group Website');
+    $mail->addAddress('business@solisgroup.ltd', 'Business');     //Add a recipient
+    $mail->addReplyTo($from_email, $name);
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML

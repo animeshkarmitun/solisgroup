@@ -57,14 +57,6 @@
                     <div class="container clearfix">
                         <div class="header-center">
                             <div class="wt-header-left">
-                                <!-- Header left -->
-                                <ul class="list-unstyled e-p-bx">
-                                    <li><i class="fa fa-envelope m-r10 site-text-primary"></i>business@solisgroup.ltd
-                                    </li>
-                                    <li><i class="fa fa-phone m-r10 site-text-primary"></i>+65 8427 2692</li>
-                                </ul>
-                            </div>
-                            <div class="wt-header-center">
                                 <div class="logo-header">
                                     <div class="logo-header-inner logo-header-one">
                                         <a href="index.html">
@@ -73,12 +65,11 @@
                                     </div>
                                 </div>
                             </div>
-                                                        <div class="wt-header-right">
-
+                            <div class="wt-header-center">
                                 <!-- Desktop Inline Nav -->
                                 <div class="extra-nav header-nav-desktop">
                                     <div class="extra-cell">
-                                        <ul class="header-inline-nav">
+                                        <ul class="header-inline-nav" style="margin-top: 15px;">
                                             <li><a href="index.html">Home</a></li>
                                             <li>
                                                 <a href="javascript:;">About</a>
@@ -88,9 +79,10 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Our Companies</a>
+                                                <a href="our-companies.html">Our Companies</a>
                                                 <ul class="header-dropdown">
-                                                    <li><a href="company-sec.html">Solis Engineering &amp; Consulting</a></li>
+                                                    <li><a href="company-sec.html">Solis Engineering &amp;
+                                                            Consulting</a></li>
                                                     <li><a href="company-greymatter.html">Greymatter</a></li>
                                                     <li><a href="company-forum.html">Solis Global Forum</a></li>
                                                     <li><a href="company-house-of-solis.html">House of Solis</a></li>
@@ -110,7 +102,13 @@
                                         </div>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div class="wt-header-right">
+                                <!-- Header right email -->
+                                <ul class="list-unstyled e-p-bx">
+                                    <li><i class="fa fa-envelope m-r10 site-text-primary"></i>business@solisgroup.ltd
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <!-- Search popup -->
@@ -156,7 +154,7 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">Our Companies</a>
+                                                <a href="our-companies.html">Our Companies</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="company-sec.html">Solis Engineering & Consulting</a>
                                                     </li>
@@ -220,7 +218,7 @@
             <!-- SECTION CONTENTG START -->
             <div class="section-full p-t80 p-b50">
                 <!-- LOCATION BLOCK-->
-                <div class="container">
+                <!-- <div class="container">
 
                     <div class="gmap-outline m-b50">
                         <div class="google-map-gray google-map">
@@ -231,7 +229,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
                 <!-- GOOGLE MAP & CONTACT FORM -->
                 <div class="contact-form-wrap-st1 section-content overlay-wraper bg-repeat site-bg-primary overflow-hide"
                     style="background-image:url(images/background/bg7.png);">
@@ -251,7 +249,12 @@
 
                                         <div class="form-group">
                                             <input name="username" type="text" required class="form-control"
-                                                placeholder="Name">
+                                                placeholder="Full Name">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input name="phone" type="text" class="form-control" required
+                                                placeholder="Phone">
                                         </div>
 
                                         <div class="form-group">
@@ -260,7 +263,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <textarea name="message" rows="4" class="form-control " required
+                                            <textarea name="message" rows="8" class="form-control " required
                                                 placeholder="Message"></textarea>
                                         </div>
 
