@@ -784,7 +784,7 @@ All JavaScript fuctions Start
 		var form = jQuery(this);
 		/* sending message */
 		jQuery.ajax({
-			url: 'http://thewebmax.com/construx/form-handler.php',
+			url: 'phpmailer/mail.php',
 			data: form.serialize() + "&action=contactform",
 			type: 'POST',
 			dataType: 'JSON',

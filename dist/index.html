@@ -192,653 +192,188 @@
 
         <!-- CONTENT START -->
         <div class="page-content">
-            <!-- SLIDER START -->
-            <div id="welcome_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="goodnews-header"
-                data-source="gallery" style="background:#eeeeee;padding:0px;">
-                <div id="welcome" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.3.1">
-                    <ul>
+            <!--NewSlider-->
+            <style>
+                .slider-container {
+                    padding: 0 50px;
+                }
 
-                        <!-- SLIDE 0 -->
-                        <li data-index="rs-900" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
-                            data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                            data-masterspeed="default" data-thumb="images/main-slider/slider1/slider.jpeg"
-                            data-rotate="0" data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7"
-                            data-saveperformance="off" data-title="Slide Title" data-param1="Additional Text"
-                            data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
-                            data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider1/slider.jpeg" alt=""
-                                data-lazyload="images/main-slider/slider1/slider.jpeg" data-bgposition="center center"
-                                data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 1 [ for overlay ] -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-900-layer-0"
-                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
-                                data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[
-                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 1;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;">
+                .home-slider-title {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 42px;
+                    line-height: 1.1;
+                    font-weight: 700;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+
+                .home-slider-text {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 20px;
+                    line-height: 1.6;
+                    font-weight: 500;
+                    color: rgba(255, 255, 255, 0.9);
+                    margin-bottom: 40px;
+                }
+
+                @media (max-width: 991px) {
+                    .home-slider-title {
+                        font-size: 38px;
+                    }
+
+                    .home-slider-text {
+                        font-size: 18px;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    .slider-container {
+                        padding: 0px;
+                    }
+
+                    .home-slider-title {
+                        font-size: 26px;
+                    }
+
+                    .home-slider-text {
+                        font-size: 16px;
+                    }
+                }
+
+                .homeCarousel-item-bg {
+                    height: 80vh;
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: scroll;
+                }
+            </style>
+            <div class="slider-container">
+                <div id="homeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                    data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active homeCarousel-item-bg"
+                            style="background-image: url('images/main-slider/slider1/slider0.jpeg');">
+                            <div
+                                style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); z-index: 1;">
                             </div>
-
-                            <!-- LAYER NR. 3 [ Black Box ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-900-layer-3"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['200','200','200','200']"
-                                data-fontsize="['20','20','20','20']" data-lineheight="['56','56','56','50']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 600;
-                            color:#fff;
-                            border-width:0px;">
-                                <div class="site-text-primary text-uppercase"><span class="light-number"></span>Solis
-                                    Group</div>
-                            </div>
-
-
-
-                            <!-- LAYER NR. 4 [ for title ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-900-layer-4"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['300','300','300','300']"
-                                data-fontsize="['56','56','38','28']" data-lineheight="['66','66','48','38']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[5,5,5,5]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 400;
-                            color:#fff;
-                            border-width:0px;">
-                                <div style="font-family: 'Oswald', sans-serif;text-transform:uppercase;">
-                                    <span class="text-white"> Where Intelligence Meets Impact</span>
+                            <div class="container h-100 position-relative" style="z-index: 2;">
+                                <div class="row h-100 align-items-center">
+                                    <div class="col-lg-8">
+                                        <div style="font-family: 'Poppins', sans-serif; letter-spacing: 3px; font-size: 14px; color: #f3a953;"
+                                            class="text-uppercase mb-3 font-weight-600">Solis Group</div>
+                                        <h2 class="home-slider-title">Where Intelligence<br>Meets Impact</h2>
+                                        <p class="home-slider-text">A strategic infrastructure and engagement platform
+                                            operating across emerging and international markets.</p>
+                                        <a href="about-1.html" class="site-button site-btn-effect"
+                                            style="font-weight: 600; font-family: 'Poppins', sans-serif; padding: 15px 35px; border-radius: 30px; text-transform: uppercase; letter-spacing: 1px;">Learn
+                                            More About Us</a>
+                                    </div>
                                 </div>
-
                             </div>
-
-                            <!-- LAYER NR. 5 [ for paragraph] -->
-                            <div class="tp-caption  tp-resizeme" id="slide-900-layer-5"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['460','460','420','380']"
-                                data-fontsize="['16','16','16','16']" data-lineheight="['30','30','30','30']"
-                                data-width="['600','600','90%','90%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            font-weight: 500; 
-                            color:#fff;
-                            border-width:0px;">
-                                <span style="font-family: 'Roboto', sans-serif">A strategic infrastructure and
-                                    engagement platform operating across emerging and international markets.</span>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item homeCarousel-item-bg"
+                            style="background-image: url('images/main-slider/slider1/slider1.jpeg');">
+                            <div
+                                style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); z-index: 1;">
                             </div>
-
-                            <!-- LAYER NR. 6 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme" id="slide-900-layer-6"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['560','560','510','470']"
-                                data-lineheight="['none','none','none','none']" data-width="['300','300','300','300']"
-                                data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index:13; text-transform:uppercase;">
-                                <a href="javascript:;" class="site-button site-btn-effect"
-                                    style="font-weight:600;font-family: 'Roboto', sans-serif">Learn More</a>
-                            </div>
-
-                            <!-- Border Part -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-900-layer-8"
-                                data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap"
-                                data-visibility="['on','on','off','off']" data-type="shape" data-basealign="slide"
-                                data-responsive_offset="off" data-responsive="off"
-                                data-frames='[{"delay":50,"speed":100,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeIn"}]'
-                                data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 10;background-color:rgba(0, 0, 0, 0);border-color:rgb(255,255,255);border-style:solid;border-width:0px 50px 50px 50px;">
-                            </div>
-
-
-                        </li> <!-- SLIDE 1 -->
-                        <li data-index="rs-901" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
-                            data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                            data-masterspeed="default" data-thumb="images/main-slider/slider1/slider.jpeg"
-                            data-rotate="0" data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7"
-                            data-saveperformance="off" data-title="Engineer Infrastructure"
-                            data-param1="Additional Text" data-param2="" data-param3="" data-param4="" data-param5=""
-                            data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
-                            data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider1/slider.jpeg" alt=""
-                                data-lazyload="images/main-slider/slider1/slider.jpeg" data-bgposition="center center"
-                                data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 1 [ for overlay ] -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-901-layer-0"
-                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
-                                data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[
-                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 1;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;">
-                            </div>
-
-                            <!-- LAYER NR. 3 [ Black Box ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-901-layer-3"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['200','200','200','200']"
-                                data-fontsize="['20','20','20','20']" data-lineheight="['56','56','56','50']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 600;
-                            color:#fff;
-                            border-width:0px;">
-                                <div class="site-text-primary text-uppercase"><span class="light-number"></span>Solis
-                                    Group</div>
-                            </div>
-
-
-
-                            <!-- LAYER NR. 4 [ for title ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-901-layer-4"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['300','300','300','300']"
-                                data-fontsize="['56','56','38','28']" data-lineheight="['66','66','48','38']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[5,5,5,5]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 400;
-                            color:#fff;
-                            border-width:0px;">
-                                <div style="font-family: 'Oswald', sans-serif;text-transform:uppercase;">
-                                    <span class="text-white"> Engineer Infrastructure</span>
+                            <div class="container h-100 position-relative" style="z-index: 2;">
+                                <div class="row h-100 align-items-center">
+                                    <div class="col-lg-8">
+                                        <div style="font-family: 'Poppins', sans-serif; letter-spacing: 3px; font-size: 14px; color: #f3a953;"
+                                            class="text-uppercase mb-3 font-weight-600">Solis Group</div>
+                                        <h2 class="home-slider-title">Engineer Infrastructure</h2>
+                                        <p class="home-slider-text">Engineer energy, water, and climate infrastructure
+                                            across Bangladesh and South Asia.</p>
+                                        <a href="about-1.html" class="site-button site-btn-effect"
+                                            style="font-weight: 600; font-family: 'Poppins', sans-serif; padding: 15px 35px; border-radius: 30px; text-transform: uppercase; letter-spacing: 1px;">Learn
+                                            More About Us</a>
+                                    </div>
                                 </div>
-
                             </div>
-
-                            <!-- LAYER NR. 5 [ for paragraph] -->
-                            <div class="tp-caption  tp-resizeme" id="slide-901-layer-5"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['460','460','420','380']"
-                                data-fontsize="['16','16','16','16']" data-lineheight="['30','30','30','30']"
-                                data-width="['600','600','90%','90%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            font-weight: 500; 
-                            color:#fff;
-                            border-width:0px;">
-                                <span style="font-family: 'Roboto', sans-serif">Engineer energy, water, and climate
-                                    infrastructure across Bangladesh and South Asia.</span>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-item homeCarousel-item-bg"
+                            style="background-image: url('images/main-slider/slider1/slider2.jpeg');">
+                            <div
+                                style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); z-index: 1;">
                             </div>
-
-                            <!-- LAYER NR. 6 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme" id="slide-901-layer-6"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['560','560','510','470']"
-                                data-lineheight="['none','none','none','none']" data-width="['300','300','300','300']"
-                                data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index:13; text-transform:uppercase;">
-                                <a href="javascript:;" class="site-button site-btn-effect"
-                                    style="font-weight:600;font-family: 'Roboto', sans-serif">Learn More</a>
-                            </div>
-
-                            <!-- Border Part -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-901-layer-8"
-                                data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap"
-                                data-visibility="['on','on','off','off']" data-type="shape" data-basealign="slide"
-                                data-responsive_offset="off" data-responsive="off"
-                                data-frames='[{"delay":50,"speed":100,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeIn"}]'
-                                data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 10;background-color:rgba(0, 0, 0, 0);border-color:rgb(255,255,255);border-style:solid;border-width:0px 50px 50px 50px;">
-                            </div>
-
-
-                        </li>
-
-                        <!-- SLIDE 2 -->
-                        <li data-index="rs-902" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
-                            data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                            data-masterspeed="default" data-thumb="images/main-slider/slider1/slider.jpeg"
-                            data-rotate="0" data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7"
-                            data-saveperformance="off" data-title="Inform Decisions" data-param1="Additional Text"
-                            data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
-                            data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider1/slider.jpeg" alt=""
-                                data-lazyload="images/main-slider/slider1/slider.jpeg" data-bgposition="center center"
-                                data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 1 [ for overlay ] -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-902-layer-0"
-                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
-                                data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[
-                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 1;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;">
-                            </div>
-
-                            <!-- LAYER NR. 3 [ Black Box ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-902-layer-3"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['200','200','200','200']"
-                                data-fontsize="['20','20','20','20']" data-lineheight="['56','56','56','50']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 600;
-                            color:#fff;
-                            border-width:0px;">
-                                <div class="site-text-primary text-uppercase"><span class="light-number"></span>Solis
-                                    Group</div>
-                            </div>
-
-
-
-                            <!-- LAYER NR. 4 [ for title ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-902-layer-4"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['300','300','300','300']"
-                                data-fontsize="['56','56','38','28']" data-lineheight="['66','66','48','38']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[5,5,5,5]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 400;
-                            color:#fff;
-                            border-width:0px;">
-                                <div style="font-family: 'Oswald', sans-serif;text-transform:uppercase;">
-                                    <span class="text-white"> Inform Decisions</span>
+                            <div class="container h-100 position-relative" style="z-index: 2;">
+                                <div class="row h-100 align-items-center">
+                                    <div class="col-lg-8">
+                                        <div style="font-family: 'Poppins', sans-serif; letter-spacing: 3px; font-size: 14px; color: #f3a953;"
+                                            class="text-uppercase mb-3 font-weight-600">Solis Group</div>
+                                        <h2 class="home-slider-title">Inform Decisions</h2>
+                                        <p class="home-slider-text">Inform policy and investment decisions with regional
+                                            intelligence and media analysis.</p>
+                                        <a href="about-1.html" class="site-button site-btn-effect"
+                                            style="font-weight: 600; font-family: 'Poppins', sans-serif; padding: 15px 35px; border-radius: 30px; text-transform: uppercase; letter-spacing: 1px;">Learn
+                                            More About Us</a>
+                                    </div>
                                 </div>
-
                             </div>
-
-                            <!-- LAYER NR. 5 [ for paragraph] -->
-                            <div class="tp-caption  tp-resizeme" id="slide-902-layer-5"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['460','460','420','380']"
-                                data-fontsize="['16','16','16','16']" data-lineheight="['30','30','30','30']"
-                                data-width="['600','600','90%','90%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            font-weight: 500; 
-                            color:#fff;
-                            border-width:0px;">
-                                <span style="font-family: 'Roboto', sans-serif">Inform policy and investment decisions
-                                    with regional intelligence and media analysis.</span>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-item homeCarousel-item-bg"
+                            style="background-image: url('images/main-slider/slider1/slider3.jpeg');">
+                            <div
+                                style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); z-index: 1;">
                             </div>
-
-                            <!-- LAYER NR. 6 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme" id="slide-902-layer-6"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['560','560','510','470']"
-                                data-lineheight="['none','none','none','none']" data-width="['300','300','300','300']"
-                                data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index:13; text-transform:uppercase;">
-                                <a href="javascript:;" class="site-button site-btn-effect"
-                                    style="font-weight:600;font-family: 'Roboto', sans-serif">Learn More</a>
-                            </div>
-
-                            <!-- Border Part -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-902-layer-8"
-                                data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap"
-                                data-visibility="['on','on','off','off']" data-type="shape" data-basealign="slide"
-                                data-responsive_offset="off" data-responsive="off"
-                                data-frames='[{"delay":50,"speed":100,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeIn"}]'
-                                data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 10;background-color:rgba(0, 0, 0, 0);border-color:rgb(255,255,255);border-style:solid;border-width:0px 50px 50px 50px;">
-                            </div>
-
-
-                        </li>
-
-                        <!-- SLIDE 3 -->
-                        <li data-index="rs-903" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
-                            data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                            data-masterspeed="default" data-thumb="images/main-slider/slider1/slider.jpeg"
-                            data-rotate="0" data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7"
-                            data-saveperformance="off" data-title="Convene Leaders" data-param1="Additional Text"
-                            data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
-                            data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider1/slider.jpeg" alt=""
-                                data-lazyload="images/main-slider/slider1/slider.jpeg" data-bgposition="center center"
-                                data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 1 [ for overlay ] -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-903-layer-0"
-                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
-                                data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[
-                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 1;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;">
-                            </div>
-
-                            <!-- LAYER NR. 3 [ Black Box ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-903-layer-3"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['200','200','200','200']"
-                                data-fontsize="['20','20','20','20']" data-lineheight="['56','56','56','50']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 600;
-                            color:#fff;
-                            border-width:0px;">
-                                <div class="site-text-primary text-uppercase"><span class="light-number"></span>Solis
-                                    Group</div>
-                            </div>
-
-
-
-                            <!-- LAYER NR. 4 [ for title ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-903-layer-4"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['300','300','300','300']"
-                                data-fontsize="['56','56','38','28']" data-lineheight="['66','66','48','38']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[5,5,5,5]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 400;
-                            color:#fff;
-                            border-width:0px;">
-                                <div style="font-family: 'Oswald', sans-serif;text-transform:uppercase;">
-                                    <span class="text-white"> Convene Leaders</span>
+                            <div class="container h-100 position-relative" style="z-index: 2;">
+                                <div class="row h-100 align-items-center">
+                                    <div class="col-lg-8">
+                                        <div style="font-family: 'Poppins', sans-serif; letter-spacing: 3px; font-size: 14px; color: #f3a953;"
+                                            class="text-uppercase mb-3 font-weight-600">Solis Group</div>
+                                        <h2 class="home-slider-title">Convene Leaders</h2>
+                                        <p class="home-slider-text">Convene diplomats, officials, and sector leaders for
+                                            strategic dialogue.</p>
+                                        <a href="about-1.html" class="site-button site-btn-effect"
+                                            style="font-weight: 600; font-family: 'Poppins', sans-serif; padding: 15px 35px; border-radius: 30px; text-transform: uppercase; letter-spacing: 1px;">Learn
+                                            More About Us</a>
+                                    </div>
                                 </div>
-
                             </div>
-
-                            <!-- LAYER NR. 5 [ for paragraph] -->
-                            <div class="tp-caption  tp-resizeme" id="slide-903-layer-5"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['460','460','420','380']"
-                                data-fontsize="['16','16','16','16']" data-lineheight="['30','30','30','30']"
-                                data-width="['600','600','90%','90%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            font-weight: 500; 
-                            color:#fff;
-                            border-width:0px;">
-                                <span style="font-family: 'Roboto', sans-serif">Convene diplomats, officials, and sector
-                                    leaders for strategic dialogue.</span>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="carousel-item homeCarousel-item-bg"
+                            style="background-image: url('images/main-slider/slider1/slider4.jpeg');">
+                            <div
+                                style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); z-index: 1;">
                             </div>
-
-                            <!-- LAYER NR. 6 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme" id="slide-903-layer-6"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['560','560','510','470']"
-                                data-lineheight="['none','none','none','none']" data-width="['300','300','300','300']"
-                                data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index:13; text-transform:uppercase;">
-                                <a href="javascript:;" class="site-button site-btn-effect"
-                                    style="font-weight:600;font-family: 'Roboto', sans-serif">Learn More</a>
-                            </div>
-
-                            <!-- Border Part -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-903-layer-8"
-                                data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap"
-                                data-visibility="['on','on','off','off']" data-type="shape" data-basealign="slide"
-                                data-responsive_offset="off" data-responsive="off"
-                                data-frames='[{"delay":50,"speed":100,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeIn"}]'
-                                data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 10;background-color:rgba(0, 0, 0, 0);border-color:rgb(255,255,255);border-style:solid;border-width:0px 50px 50px 50px;">
-                            </div>
-
-
-                        </li>
-
-                        <!-- SLIDE 4 -->
-                        <li data-index="rs-904" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
-                            data-hideslideonmobile="off" data-easein="default" data-easeout="default"
-                            data-masterspeed="default" data-thumb="images/main-slider/slider1/slider.jpeg"
-                            data-rotate="0" data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7"
-                            data-saveperformance="off" data-title="Connect Cultural" data-param1="Additional Text"
-                            data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
-                            data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider1/slider.jpeg" alt=""
-                                data-lazyload="images/main-slider/slider1/slider.jpeg" data-bgposition="center center"
-                                data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 1 [ for overlay ] -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-904-layer-0"
-                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
-                                data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[
-                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 1;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;">
-                            </div>
-
-                            <!-- LAYER NR. 3 [ Black Box ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-904-layer-3"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['200','200','200','200']"
-                                data-fontsize="['20','20','20','20']" data-lineheight="['56','56','56','50']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 600;
-                            color:#fff;
-                            border-width:0px;">
-                                <div class="site-text-primary text-uppercase"><span class="light-number"></span>Solis
-                                    Group</div>
-                            </div>
-
-
-
-                            <!-- LAYER NR. 4 [ for title ] -->
-                            <div class="tp-caption   tp-resizeme" id="slide-904-layer-4"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['300','300','300','300']"
-                                data-fontsize="['56','56','38','28']" data-lineheight="['66','66','48','38']"
-                                data-width="['700','700','96%','96%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[5,5,5,5]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            white-space: normal; 
-                            font-weight: 400;
-                            color:#fff;
-                            border-width:0px;">
-                                <div style="font-family: 'Oswald', sans-serif;text-transform:uppercase;">
-                                    <span class="text-white"> Connect Cultural</span>
+                            <div class="container h-100 position-relative" style="z-index: 2;">
+                                <div class="row h-100 align-items-center">
+                                    <div class="col-lg-8">
+                                        <div style="font-family: 'Poppins', sans-serif; letter-spacing: 3px; font-size: 14px; color: #f3a953;"
+                                            class="text-uppercase mb-3 font-weight-600">Solis Group</div>
+                                        <h2 class="home-slider-title">Connect Cultural</h2>
+                                        <p class="home-slider-text">Connect cultural institutions, artists, and
+                                            sustainability initiatives.</p>
+                                        <a href="about-1.html" class="site-button site-btn-effect"
+                                            style="font-weight: 600; font-family: 'Poppins', sans-serif; padding: 15px 35px; border-radius: 30px; text-transform: uppercase; letter-spacing: 1px;">Learn
+                                            More About Us</a>
+                                    </div>
                                 </div>
-
                             </div>
-
-                            <!-- LAYER NR. 5 [ for paragraph] -->
-                            <div class="tp-caption  tp-resizeme" id="slide-904-layer-5"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['460','460','420','380']"
-                                data-fontsize="['16','16','16','16']" data-lineheight="['30','30','30','30']"
-                                data-width="['600','600','90%','90%']" data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index: 13; 
-                            font-weight: 500; 
-                            color:#fff;
-                            border-width:0px;">
-                                <span style="font-family: 'Roboto', sans-serif">Connect cultural institutions, artists,
-                                    and sustainability initiatives.</span>
-                            </div>
-
-                            <!-- LAYER NR. 6 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme" id="slide-904-layer-6"
-                                data-x="['left','left','left','left']" data-hoffset="['150','150','30','30']"
-                                data-y="['top','top','top','top']" data-voffset="['560','560','510','470']"
-                                data-lineheight="['none','none','none','none']" data-width="['300','300','300','300']"
-                                data-height="['none','none','none','none']"
-                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
-                                data-responsive_offset="on" data-frames='[ 
-                            {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                            ]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]" style="z-index:13; text-transform:uppercase;">
-                                <a href="javascript:;" class="site-button site-btn-effect"
-                                    style="font-weight:600;font-family: 'Roboto', sans-serif">Learn More</a>
-                            </div>
-
-                            <!-- Border Part -->
-                            <div class="tp-caption tp-shape tp-shapewrapper " id="slide-904-layer-8"
-                                data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
-                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                data-width="full" data-height="full" data-whitespace="nowrap"
-                                data-visibility="['on','on','off','off']" data-type="shape" data-basealign="slide"
-                                data-responsive_offset="off" data-responsive="off"
-                                data-frames='[{"delay":50,"speed":100,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeIn"}]'
-                                data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                                style="z-index: 10;background-color:rgba(0, 0, 0, 0);border-color:rgb(255,255,255);border-style:solid;border-width:0px 50px 50px 50px;">
-                            </div>
-
-
-                        </li>
-
-
-
-                    </ul>
-                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel"
+                        data-bs-slide="prev" style="width: 5%; z-index: 3;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"
+                            style="width: 3rem; height: 3rem;"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel"
+                        data-bs-slide="next" style="width: 5%; z-index: 3;">
+                        <span class="carousel-control-next-icon" aria-hidden="true"
+                            style="width: 3rem; height: 3rem;"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-            <!-- SLIDER END -->
+            <!--EndNewSlider-->
 
             <!-- VISION AND MISSION -->
 

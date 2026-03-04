@@ -1,34 +1,22 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
 $msg = '';
 if (array_key_exists('email', $_POST)) {
-print_r($_POST);exit;
-    require 'vendor/autoload.php';
-    $mail = new PHPMailer;
-    $mail->isSMTP();
-    $mail->Host = 'smtp.hostinger.com';
-    $mail->Port = 465;
-    $mail->SMTPDebug = 1;
-    $mail->SMTPAuth = true;
-    $mail->Username = 'business@solisgroup.ltd';
-    $mail->Password = 'Mahak##2020';
-    $mail->setFrom('website@solisgroup.ltd', 'Website');
-    $mail->addAddress('business@solisgroup.ltd', 'Business');
-    if ($mail->addReplyTo($_POST['email'], $_POST['name'])) {
-        $mail->Subject = 'PHPMailer contact form';
-        $mail->isHTML(false);
-        $mail->Body = <<<EOT
-            Email: {$_POST['email']}
-            Name: {$_POST['name']}
-            Message: {$_POST['message']}
-EOT;
-        if (!$mail->send()) {
-            $msg = 'Sorry, something went wrong. Please try again later.';
-        } else {
-            $msg = 'Message sent! Thanks for contacting us.';
-        }
+    $to = 'business@solisgroup.ltd';
+    $subject = 'Contact from solisgroup website';
+    $name = strip_tags($_POST['name']);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $message = strip_tags($_POST['message']);
+
+    $headers = "From: Solis Group Website <website@solisgroup.ltd>\r\n";
+    $headers .= "Reply-To: $name <$email>\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
+
+    $body = "Email: $email\nName: $name\nMessage:\n$message";
+
+    if (mail($to, $subject, $body, $headers)) {
+        $msg = 'Message sent! Thanks for contacting us.';
     } else {
-        $msg = 'Share it with us!';
+        $msg = 'Sorry, something went wrong. Please try again later.';
     }
 }
 ?>

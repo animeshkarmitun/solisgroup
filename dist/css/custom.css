@@ -133,3 +133,65 @@ CUSTOM CSS - Solis Group
         /* adjust vertical alignment if necessary */
     }
 }
+
+/* ===== TABLET & MOBILE HEADER LAYOUT FIXES ===== */
+@media (max-width: 1270px) {
+    .header-center {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .header-center .wt-header-left {
+        display: block !important;
+        width: auto !important;
+        height: auto !important;
+        text-align: left !important;
+        flex: 0 0 auto !important;
+    }
+
+    .header-center .wt-header-left .logo-header {
+        display: table !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 5px 0 !important;
+    }
+
+    .header-center .wt-header-left .logo-header .logo-header-inner {
+        display: table-cell !important;
+        vertical-align: middle !important;
+    }
+
+    .header-center .wt-header-left .logo-header img {
+        display: block !important;
+        max-width: 140px !important;
+        height: auto !important;
+    }
+
+    .header-center .wt-header-center {
+        display: block !important;
+        width: auto !important;
+        text-align: right !important;
+        flex: 1 1 auto !important;
+    }
+
+    .header-center .wt-header-right {
+        display: none !important;
+        /* Hide email text to save space for logo and menu */
+    }
+
+    .extra-nav.header-hamburger-only {
+        float: none !important;
+        display: inline-block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .extra-nav.header-hamburger-only .menu-btn {
+        padding-top: 25px;
+    }
+}
